@@ -9,6 +9,8 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <!-- Favicons -->
   <link href="assets/img/tabicon.svg" rel="icon">
 
@@ -444,7 +446,8 @@
               <div class="portfolio-links">
                 <!-- <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
                   class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a> -->
-                <a href="https://github.com/S00RAJ-S/Week1/tree/main/Jio" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="https://github.com/S00RAJ-S/Week1/tree/main/Jio" target="_blank" title="More Details"><i
+                    class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
@@ -453,7 +456,8 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/Asus.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="https://github.com/S00RAJ-S/Week1/tree/main/Asus" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="https://github.com/S00RAJ-S/Week1/tree/main/Asus" target="_blank" title="More Details"><i
+                    class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
@@ -462,7 +466,8 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/upstox.png" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="https://github.com/S00RAJ-S/Week2/tree/master/Responsive" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="https://github.com/S00RAJ-S/Week2/tree/master/Responsive" target="_blank"
+                  title="More Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
@@ -471,7 +476,8 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/COMPUTISM.png" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="http://1computism.000webhostapp.com/" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="http://1computism.000webhostapp.com/" target="_blank" title="More Details"><i
+                    class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
@@ -480,7 +486,8 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/AUTOcare.png" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="https://github.com/S00RAJ-S/Autocare" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="https://github.com/S00RAJ-S/Autocare" target="_blank" title="More Details"><i
+                    class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
@@ -562,7 +569,7 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form role="form" onsubmit="submission()" class="php-email-form">
+            <form role="form" onsubmit="submission()" id="submit-form" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
@@ -624,7 +631,25 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    $("#submit-form").submit((e) => {
+      e.preventDefault()
+      $.ajax({
+        url: "https://script.google.com/macros/s/AKfycby90eiyjeKAl1NuUxWonTRN9HuP4CcBMy5t6cMgsuH6TaO4NjHeMZBy6XKwYlwEjNYktw/exec",
+        data: $("#submit-form").serialize(),
+        method: "post",
+        success: function (response) {
+          alert("Form submitted successfully")
+          window.location.reload()
+          //window.location.href="https://google.com"
+        },
+        error: function (err) {
+          alert("Something Error")
 
+        }
+      })
+    })
+  </script>
 </body>
 
 </html>

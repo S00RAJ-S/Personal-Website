@@ -2,16 +2,10 @@ function submission(){
     if(nameValidation() && emailValidation() && subjectValidation() && messageValidation() ){
         document.getElementById("submissionerror").className = "text-success";
         document.getElementById("submissionerror").innerHTML = "Submitted Successfully";
-        setTimeout(redirecting,1000);
-        
     }
     else{
         document.getElementById("submissionerror").innerHTML = "Please Fill all the fields Before Submission";
     }
-}
-function redirecting()
-{
-    location.href = "https://www.google.com/";
 }
 
 
