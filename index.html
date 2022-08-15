@@ -30,7 +30,7 @@
 
   <style>
     .invalid {
-      box-shadow: 5px 6px 10px 2px red !important;
+      box-shadow: 1px 1px 6px 1px red !important;
     }
 
     .valid {
@@ -567,10 +567,12 @@
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
                   <input type="text" oninput="nameValidation()" name="name" class="form-control" id="name">
+                  <p id="nm"></p>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="name">Your Email</label>
                   <input type="email" oninput="emailValidation()" class="form-control" name="email" id="email">
+                  <p id="nm1"></p>
                 </div>
               </div>
               <div class="form-group">

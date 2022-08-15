@@ -21,10 +21,14 @@ function nameValidation(){
     nval = nid.value;
     if(testCase.test(nval)){
         nid.className = "form-control valid";
+        document.getElementById("nm").innerHTML="Correct";
+        document.getElementById("nm").className="text-success mt-2";
         return true;
     }
     else{
         nid.className = "form-control invalid";
+        document.getElementById("nm").className="text-danger mt-2";
+        document.getElementById("nm").innerHTML="Incorrect";
     }
 }
 
@@ -34,10 +38,14 @@ function emailValidation(){
     evalue = eid.value;
     if(testCase.test(evalue)){
         eid.className = "form-control valid";
+        document.getElementById("nm1").innerHTML="Correct";
+        document.getElementById("nm1").className="text-success mt-2";
         return true;
     }
     else{
         eid.className = "form-control invalid";
+        document.getElementById("nm1").className="text-danger mt-2";
+        document.getElementById("nm1").innerHTML="Incorrect Email";
     }
 }
 
